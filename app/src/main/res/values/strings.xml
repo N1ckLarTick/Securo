@@ -8,6 +8,6 @@
     <string name="EnterLogin">Введите логин</string>
     <string name="EnterPassword">Введите пароль</string>
     <string name="LoginToEnter">Войти</string>
-    <string name="RegisterAdvice">Нет аккаунта? Создайте аккаунт. </string>
+    <string name="RegisterAdvice">Нет аккаунта? Создайте аккаунт.</string>
 
 </resources>
