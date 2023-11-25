@@ -19,6 +19,7 @@ public class DBHelper extends SQLiteOpenHelper{
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_CONTACT + " (" +  KEY_ID + " integer primary key," + KEY_NAME + " text," + KEY_LOGIN + " text," + KEY_PASSWORD + " text" + ")");
