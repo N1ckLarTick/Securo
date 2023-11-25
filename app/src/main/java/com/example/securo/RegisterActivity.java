@@ -1,11 +1,10 @@
 package com.example.securo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.securo.databinding.ActivityLoginBinding;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.securo.databinding.ActivityRegisterBinding;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -26,5 +25,6 @@ public class RegisterActivity extends AppCompatActivity {
             String Schoolname = binding.EditSchoolName.getText().toString();
             String Class = binding.EditClass.getText().toString();
         });
+
     }
 }
