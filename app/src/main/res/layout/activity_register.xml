@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
-
+    tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="100dp"
         app:srcCompat="@drawable/logo_image" />
 
     <TextView
-        android:id="@+id/loginText"
+        android:id="@+id/LoginText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/LoginTxt"
@@ -46,16 +45,64 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:hint="@string/EnterPassword" />
-    <Button
-        android:id="@+id/LoginBtn"
+    <TextView
+        android:id="@+id/FirstSecondNameText"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FirstNSecondName"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:textSize="25dp"
+        android:fontFamily="cursive"
+        android:textColor="@color/teal_200" />
+    <EditText
+        android:id="@+id/EditFirstSecondName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/EnterFirstNSecondName" />
+    <TextView
+        android:id="@+id/SchoolText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SchoolNameTxt"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:textSize="25dp"
+        android:fontFamily="cursive"
+        android:textColor="@color/teal_200" />
+    <EditText
+        android:id="@+id/EditSchoolName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/EnterSchoolName" />
+    <TextView
+        android:id="@+id/ClassText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ClassNumberTxt"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:textSize="25dp"
+        android:fontFamily="cursive"
+        android:textColor="@color/teal_200" />
+    <EditText
+        android:id="@+id/EditClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:hint="@string/EnterClass" />
+    <Button
+        android:id="@+id/RegisterBtn"
+        android:layout_width="221dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginHorizontal="100dp"
         android:layout_marginVertical="10dp"
-        android:text="@string/LoginToEnter" />
+        android:text="@string/RegisterToEnter" />
     <TextView
-        android:id="@+id/RegisterAdviceTxt"
+        android:id="@+id/BackToLoginAdviceTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
@@ -65,5 +112,5 @@
         android:layout_marginHorizontal="30dp"
         android:fontFamily="cursive"
         android:textColor="@color/teal_200"
-        android:text="@string/RegisterAdvice" />
+        android:text="@string/BackToLoginAdvice" />
 </LinearLayout>
