@@ -1,22 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="170dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:src="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Fio"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Яшонков Михаил" />
+
+            <TextView
+                android:id="@+id/Class"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="9Б Класс" />
+
+            <TextView
+                android:id="@+id/School"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Инженерный лицей НГТУ" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Table"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Расписание" />
+
+    <Button
+        android:id="@+id/SchoolWeb"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Сайт Школы" />
+
+    <Button
+        android:id="@+id/Settings"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Настройки" />
+
+</LinearLayout>
