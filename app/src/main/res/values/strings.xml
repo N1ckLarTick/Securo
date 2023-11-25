@@ -3,4 +3,11 @@
     <string name="title_attendance">Посещаемость</string>
     <string name="title_scanqr">Скан QR</string>
     <string name="title_profile">Профиль</string>
+    <string name="LoginTxt">Логин</string>
+    <string name="PasswordTxt">Пароль</string>
+    <string name="EnterLogin">Введите логин</string>
+    <string name="EnterPassword">Введите пароль</string>
+    <string name="LoginToEnter">Войти</string>
+    <string name="RegisterAdvice">Нет аккаунта? Создайте аккаунт. </string>
+
 </resources>
