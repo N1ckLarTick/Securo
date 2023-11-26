@@ -64,4 +64,10 @@
         android:layout_height="90dp"
         android:text="Настройки" />
 
+    <TextView
+        android:id="@+id/textViewEmpty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView" />
+
 </LinearLayout>
