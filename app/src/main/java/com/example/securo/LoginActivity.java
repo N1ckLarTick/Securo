@@ -1,20 +1,18 @@
 package com.example.securo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.content.Intent;
-import android.view.View;
+import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.securo.databinding.ActivityLoginBinding;
-import com.example.securo.databinding.ActivityMainBinding;
-import com.google.android.material.snackbar.Snackbar;
 
 public class LoginActivity extends AppCompatActivity {
 private ActivityLoginBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        DBWorker worker = new DBWorker();
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
