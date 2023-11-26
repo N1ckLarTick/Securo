@@ -23,6 +23,7 @@ private ActivityLoginBinding binding;
         setContentView(binding.getRoot());
 
         binding.LoginBtn.setOnClickListener(view ->{
+            boolean f = false;
             String login = binding.EditLogin.getText().toString();
             String password = binding.EditPassword.getText().toString();
             String query = "select * from user where login='" + login + "' and password='" + password + "';";
@@ -35,19 +36,24 @@ private ActivityLoginBinding binding;
                     ResultSet resultSet = statement.executeQuery(query);
 
                     while (resultSet.next()) {
-                        if ((resultSet.getString(4) == login) && (resultSet.getString(5) == password)){
-                            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                            startActivity(intent);
-                        }
-                        else {
-                            Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show();
-                        }
+                        User user = new User();
+                        user.setId(resultSet.getInt(1));
+                        user.setUsername(resultSet.getString(2));
+                        user.setClas(resultSet.getString(3));
+                        user.setLogin(resultSet.getString(4));
+                        user.setPassword(resultSet.getString(5));
+                        f = true;
                     }
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
-
-
+                if (f){
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         binding.RegisterAdviceTxt.setOnClickListener(view ->{
