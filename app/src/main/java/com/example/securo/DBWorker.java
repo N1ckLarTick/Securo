@@ -12,7 +12,7 @@ public class DBWorker {
     public DBWorker() {
         try {
             DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-            connection = DriverManager.getConnection("jdbc:mysql://sql12.freesqldatabase.com:3306/sql12665097", "sql12665097", "lcv47Mtjw7");
+            connection = DriverManager.getConnection(HOST, USERNAME, PASSWORD);
         } catch (SQLException e) {
             e.printStackTrace();
         }

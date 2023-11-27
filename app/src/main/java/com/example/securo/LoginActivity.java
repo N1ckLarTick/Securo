@@ -26,11 +26,10 @@ private ActivityLoginBinding binding;
             boolean f = false;
             String login = binding.EditLogin.getText().toString();
             String password = binding.EditPassword.getText().toString();
-            String query = "select * from user where login='" + login + "' and password='" + password + "';";
+            String query = "SELECT * FROM user WHERE login = '" + login + "' AND password = '" + password + "'";
             if (login.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Введите данные", Toast.LENGTH_SHORT).show();
             } else {
-
                 try {
                     Statement statement = worker.getConnection().createStatement();
                     ResultSet resultSet = statement.executeQuery(query);
@@ -38,10 +37,7 @@ private ActivityLoginBinding binding;
                     while (resultSet.next()) {
                         User user = new User();
                         user.setId(resultSet.getInt(1));
-                        user.setUsername(resultSet.getString(2));
-                        user.setClas(resultSet.getString(3));
-                        user.setLogin(resultSet.getString(4));
-                        user.setPassword(resultSet.getString(5));
+                        System.out.println(user);
                         f = true;
                     }
                 } catch (SQLException e) {
