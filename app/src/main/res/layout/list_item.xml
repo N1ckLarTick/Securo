@@ -6,14 +6,13 @@
     android:layout_height="wrap_content"
     app:cardElevation="10dp"
     app:cardCornerRadius="10dp"
-    android:layout_margin="5dp">
+    android:layout_margin="10dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#A08BEC"
         android:orientation="vertical">
 
         <LinearLayout
@@ -23,14 +22,15 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="166dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_height="78dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="5dp">
 
                 <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="85dp"
+                    android:id="@+id/image_list"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#A08BEC"
                     tools:srcCompat="@tools:sample/avatars" />
             </androidx.cardview.widget.CardView>
 
@@ -38,20 +38,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/name_list"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"
-                    android:background="#A08BEC"
                     android:text="Name" />
 
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
-                    android:background="#A08BEC"
                     android:text="Еще текста я хз" />
             </LinearLayout>
 

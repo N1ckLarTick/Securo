@@ -31,7 +31,28 @@ public class NotificationsFragment extends Fragment{
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        View v = inflater.inflate(R.layout.fragment_notifications, container, false);
+
+        Button table = (Button) v.findViewById(R.id.Table);
+        Button schoolweb = (Button) v.findViewById(R.id.SchoolWeb);
+
+        binding.Table.setOnClickListener(v1 -> {
+            Intent browserIntent = new
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://lyceum.nstu.ru/liceistam/itemlist/category/470-raspisanie-zanyatij"));
+            startActivity(browserIntent);
+        });
+        binding.SchoolWeb.setOnClickListener(v1 -> {
+            Intent browserIntent = new
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://lyceum.nstu.ru/"));
+            startActivity(browserIntent);
+        });
+
+
+
+
+
         return root;
+
     }
 
     @Override

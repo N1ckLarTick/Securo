@@ -5,69 +5,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#5187DA"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="15dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            tools:src="@tools:sample/avatars" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
 
         <LinearLayout
-            android:layout_width="97dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/Fio"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Яшонков Михаил" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
 
-            <TextView
-                android:id="@+id/Class"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="9Б Класс" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:src="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/School"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Инженерный лицей НГТУ" />
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Fio"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Яшонков Михаил" />
+
+                <TextView
+                    android:id="@+id/Class"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="9Б Класс" />
+
+                <TextView
+                    android:id="@+id/School"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="Инженерный лицей НГТУ" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/Table"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:text="Расписание" />
+        android:layout_height="402dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
 
-    <Button
-        android:id="@+id/SchoolWeb"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:text="Сайт Школы" />
 
-    <Button
-        android:id="@+id/Settings"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:text="Настройки" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="535dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewEmpty"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="TextView" />
+            <Button
+                android:id="@+id/Table"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:backgroundTint="#3B72C8"
+                android:text="Расписание" />
+
+            <Button
+                android:id="@+id/SchoolWeb"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:backgroundTint="#3B72C8"
+                android:text="Сайт Школы" />
+
+            <Button
+                android:id="@+id/Settings"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:backgroundTint="#3B72C8"
+                android:text="Настройки" />
+
+            <Button
+                android:id="@+id/Logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="80dp"
+                android:backgroundTint="#3B72C8"
+                android:text="LogOut" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
 
 </LinearLayout>
