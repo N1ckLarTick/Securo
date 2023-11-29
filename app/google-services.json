@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "3373020207",
+    "project_id": "s3cur0",
+    "storage_bucket": "s3cur0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3373020207:android:9a0d82895ed5fbabdb82da",
+        "android_client_info": {
+          "package_name": "com.example.securo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr7k3sHYxlpcZcEtG_1vm1jmEKy_BxA7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

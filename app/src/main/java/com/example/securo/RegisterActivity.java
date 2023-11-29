@@ -2,20 +2,24 @@ package com.example.securo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.securo.databinding.ActivityRegisterBinding;
-
-import java.sql.SQLException;
-import java.sql.Statement;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
     private ActivityRegisterBinding binding;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        DBWorker worker = new DBWorker();
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.BackToLoginAdviceTxt.setOnClickListener(view ->{
@@ -28,15 +32,24 @@ public class RegisterActivity extends AppCompatActivity {
             String FirstNSecondNames = binding.EditFirstSecondName.getText().toString();
             String Schoolname = binding.EditSchoolName.getText().toString();
             String Class = binding.EditClass.getText().toString();
-            String query = "INSERT INTO user (name, class, login, password) VALUES ('" + FirstNSecondNames + "', '" + Class + "', '" + login + "', '" + password + "', '" + Schoolname + "')";
-            try {
-                Statement statement = worker.getConnection().createStatement();
-                int rows = statement.executeUpdate(query);
-
-                System.out.println("Succsesful");
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+            if (login.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Введите данные", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            mAuth.createUserWithEmailAndPassword(login, password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(RegisterActivity.this, "Registration succesful.", Toast.LENGTH_SHORT).show();
+
+                            } else {
+                                Toast.makeText(RegisterActivity.this, "Registration failed.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
         });
 
     }
