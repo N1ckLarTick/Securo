@@ -4,21 +4,11 @@
     <string name="title_scanqr">Скан QR</string>
     <string name="title_profile">Профиль</string>
     <!-- Strings related to login -->
-    <string name="LoginTxt">Логин</string>
+    <string name="LoginTxt">E-Mail</string>
     <string name="PasswordTxt">Пароль</string>
-    <string name="EnterLogin">Введите логин</string>
+    <string name="EnterLogin">Введите email</string>
     <string name="EnterPassword">Введите пароль</string>
     <string name="LoginToEnter">Войти</string>
-    <string name="RegisterAdvice">Нет аккаунта? <a href = "">Создайте его.</a></string>
-    <!-- Strings related to register -->
-    <string name="RegisterToEnter">Зарегестрироваться</string>
-    <string name="SchoolNameTxt">Название школы</string>
-    <string name="EnterSchoolName">Введите название школы</string>
-    <string name="ClassNumberTxt">Класс</string>
-    <string name="EnterClass">Введите название класса</string>
-    <string name="FirstNSecondName">Фамилия и имя</string>
-    <string name="EnterFirstNSecondName">Введите фамилию и имя</string>
-    <string name="BackToLoginAdvice">Уже есть <a href = "">аккаунт?</a></string>
     <!-- Strings related to profile -->
     <string name="SettingsText">Настройки</string>
     <string name="SchoolWebText">Сайт Школы</string>

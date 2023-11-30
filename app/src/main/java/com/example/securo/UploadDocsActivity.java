@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.result.ActivityResult;
@@ -16,11 +17,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.securo.ui.home.QrFragment;
-import com.example.securo.ui.notifications.ProfileFragment;
+import android.content.SharedPreferences;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -33,6 +35,7 @@ public class UploadDocsActivity extends AppCompatActivity {
     Button buttonApply;
     ImageView imageView;
     TextView textBack;
+    ProgressBar progressBar;
     private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
@@ -58,6 +61,7 @@ public class UploadDocsActivity extends AppCompatActivity {
         buttonApply = findViewById(R.id.buttonApply);
         imageView = findViewById(R.id.imageViewDocs);
         textBack = findViewById(R.id.textViewBack);
+        progressBar = findViewById(R.id.progressBar);
 
         buttonSelect.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,9 +87,12 @@ public class UploadDocsActivity extends AppCompatActivity {
             }
         });
     }
-
     private void uploadImage(Uri image) {
         QrFragment.quer = UUID.randomUUID().toString();
+        SharedPreferences sharedPreferences = getSharedPreferences("Query", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("Q", QrFragment.quer);
+        editor.apply();
         StorageReference reference = storageReference.child("images/" + QrFragment.quer);
         reference.putFile(image).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -99,7 +106,12 @@ public class UploadDocsActivity extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(UploadDocsActivity.this, "Ошибка", Toast.LENGTH_SHORT).show();
             }
+        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                progressBar.setMax(Math.toIntExact(snapshot.getTotalByteCount()));
+                progressBar.setProgress(Math.toIntExact(snapshot.getBytesTransferred()));
+            }
         });
     }
-
 }

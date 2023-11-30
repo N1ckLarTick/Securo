@@ -1,6 +1,9 @@
 package com.example.securo.ui.notifications;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +19,7 @@ import com.example.securo.LoginActivity;
 import com.example.securo.R;
 import com.example.securo.UploadDocsActivity;
 import com.example.securo.databinding.FragmentProfileBinding;
+import com.example.securo.ui.home.QrFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -59,6 +63,7 @@ public class ProfileFragment extends Fragment{
 
         binding.logout.setOnClickListener(v1 -> {
             FirebaseAuth.getInstance().signOut();
+            QrFragment.quer = null;
             Intent intent = new Intent(getActivity().getApplicationContext(), LoginActivity.class);
             startActivity(intent);
         });
