@@ -7,15 +7,15 @@
 
     <fragment
         android:id="@+id/navigation_attendance"
-        android:name="com.example.securo.ui.home.QrFragment"
+        android:name="com.example.securo.ui.dashboard.AttendanceFragment"
         android:label="@string/title_attendance"
-        tools:layout="@layout/fragment_qr" />
+        tools:layout="@layout/fragment_attendance" />
 
     <fragment
         android:id="@+id/navigation_scanqr"
-        android:name="com.example.securo.ui.dashboard.AttendanceFragment"
+        android:name="com.example.securo.ui.home.QrFragment"
         android:label="@string/title_scanqr"
-        tools:layout="@layout/fragment_attendance" />
+        tools:layout="@layout/fragment_qr" />
 
     <fragment
         android:id="@+id/navigation_profile"

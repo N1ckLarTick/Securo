@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#5187DA"
-    android:paddingBottom="20dp"
-    android:paddingTop="40dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="20dp"
     tools:context=".LoginActivity">
 
 
@@ -20,13 +20,13 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
+        android:layout_margin="25dp"
         app:cardCornerRadius="10dp">
 
 
         <LinearLayout
-            android:layout_width="365dp"
-            android:layout_height="375dp"
+            android:layout_width="match_parent"
+            android:layout_height="355dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 

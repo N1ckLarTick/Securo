@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#5187DA"
-    android:paddingBottom="40dp"
-    android:paddingTop="40dp"
+    android:paddingBottom="50dp"
+    android:paddingTop="50dp"
     tools:context=".ui.notifications.ProfileFragment">
 
 
@@ -27,7 +27,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="7dp"
+                android:layout_margin="8dp"
                 android:layout_weight="1"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="10dp">
@@ -35,9 +35,10 @@
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="115dp"
                     android:layout_weight="1"
-                    tools:src="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/baseline_account_circle_24"
+                    tools:src="@drawable/baseline_account_circle_24" />
 
             </androidx.cardview.widget.CardView>
 
