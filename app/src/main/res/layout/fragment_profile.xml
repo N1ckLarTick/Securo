@@ -70,7 +70,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#3B72C8"
-                android:text="Расписание" />
+                android:text="@string/ScheduleText" />
 
             <Button
                 android:id="@+id/schoolWeb"
@@ -78,7 +78,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#3B72C8"
-                android:text="Сайт Школы" />
+                android:text="@string/SchoolWebText" />
 
             <Button
                 android:id="@+id/settings"
@@ -86,7 +86,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#3B72C8"
-                android:text="Настройки" />
+                android:text="@string/SettingsText" />
 
             <Button
                 android:id="@+id/logout"
@@ -95,7 +95,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="30dp"
                 android:backgroundTint="#3B72C8"
-                android:text="Выйти" />
+                android:text="@string/QuitText" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
