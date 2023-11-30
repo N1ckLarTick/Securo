@@ -26,6 +26,12 @@ private ActivityLoginBinding binding;
         super.onCreate(savedInstanceState);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null){
+            QrFragment.quer = null;
+            SharedPreferences sharedPreferences = LoginActivity.this.getSharedPreferences("Query", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("Q", null);
+            editor.apply();
+            QrFragment.quer = sharedPreferences.getString("Q", null);
             FirebaseAuth mAuth = FirebaseAuth.getInstance();
             binding = ActivityLoginBinding.inflate(getLayoutInflater());
             setContentView(binding.getRoot());

@@ -1,7 +1,5 @@
 package com.example.securo.ui.notifications;
 
-import static android.content.Context.MODE_PRIVATE;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.securo.LoginActivity;
+import com.example.securo.MainActivity;
 import com.example.securo.R;
 import com.example.securo.UploadDocsActivity;
 import com.example.securo.databinding.FragmentProfileBinding;
@@ -29,7 +28,7 @@ public class ProfileFragment extends Fragment{
 
     FirebaseUser user;
     FirebaseAuth auth;
-    private FragmentProfileBinding binding;
+    private com.example.securo.databinding.FragmentProfileBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -67,7 +66,9 @@ public class ProfileFragment extends Fragment{
             FirebaseAuth.getInstance().signOut();
             QrFragment.quer = null;
             SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Query", Context.MODE_PRIVATE);
-            QrFragment.quer = sharedPreferences.getString("Q", QrFragment.quer);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("Q", null);
+            editor.apply();
             Intent intent = new Intent(getActivity().getApplicationContext(), LoginActivity.class);
             startActivity(intent);
         });
