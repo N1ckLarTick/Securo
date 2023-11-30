@@ -19,4 +19,9 @@
     <string name="FirstNSecondName">Фамилия и имя</string>
     <string name="EnterFirstNSecondName">Введите фамилию и имя</string>
     <string name="BackToLoginAdvice">Уже есть <a href = "">аккаунт?</a></string>
+    <!-- Strings related to profile -->
+    <string name="SettingsText">Настройки</string>
+    <string name="SchoolWebText">Сайт Школы</string>
+    <string name="ScheduleText">Расписание</string>
+    <string name="QuitText">Выйти</string>
 </resources>

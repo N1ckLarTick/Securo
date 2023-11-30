@@ -40,7 +40,7 @@ public class QrFragment extends Fragment {
             MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
 
             try {
-                BitMatrix bitMatrix = multiFormatWriter.encode("GAY", BarcodeFormat.QR_CODE, 300,300);
+                BitMatrix bitMatrix = multiFormatWriter.encode("https://www.youtube.com/watch?v=k6kcoP13kW8", BarcodeFormat.QR_CODE, 300,300);
                 BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
                 Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
 
