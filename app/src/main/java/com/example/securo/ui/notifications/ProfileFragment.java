@@ -47,7 +47,7 @@ public class ProfileFragment extends Fragment{
 
         binding.table.setOnClickListener(v1 -> {
             Intent browserIntent = new
-                    Intent(Intent.ACTION_VIEW, Uri.parse("https://lyceum.nstu.ru/liceistam/itemlist/category/470-raspisanie-zanyatij"));
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://lyceum.nstu.ru/rasp/schedule.html"));
             startActivity(browserIntent);
         });
         binding.schoolWeb.setOnClickListener(v1 -> {

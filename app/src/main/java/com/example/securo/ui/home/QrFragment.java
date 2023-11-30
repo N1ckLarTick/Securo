@@ -34,4 +34,6 @@ public class QrFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+
 }
