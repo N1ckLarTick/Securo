@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Securo"
         tools:targetApi="31">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".UploadDocsActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

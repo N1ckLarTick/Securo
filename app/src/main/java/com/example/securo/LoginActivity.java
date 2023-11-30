@@ -48,10 +48,7 @@ private ActivityLoginBinding binding;
                         });
 
             });
-            binding.RegisterAdviceTxt.setOnClickListener(view ->{
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            });} else {
+            } else {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }

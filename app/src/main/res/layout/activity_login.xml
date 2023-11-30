@@ -76,20 +76,6 @@
                 android:gravity="center"
                 android:text="@string/LoginToEnter" />
 
-            <TextView
-                android:id="@+id/RegisterAdviceTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:autoLink="web"
-                android:fontFamily="cursive"
-                android:gravity="center"
-                android:linksClickable="true"
-                android:text="@string/RegisterAdvice"
-                android:textColor="@color/black"
-                android:textColorHighlight="#000000"
-                android:textColorLink="#27A0FB"
-                android:textSize="20dp" />
         </LinearLayout>
 
 

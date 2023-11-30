@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -15,8 +14,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.securo.LoginActivity;
 import com.example.securo.R;
+import com.example.securo.UploadDocsActivity;
 import com.example.securo.databinding.FragmentProfileBinding;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -40,6 +39,7 @@ public class ProfileFragment extends Fragment{
         Button logout = (Button) v.findViewById(R.id.logout);
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
+        Button mButtonUpload = (Button) v.findViewById(R.id.buttonUploadDocs);
 
         if (user == null) {
             Intent intent = new Intent(getActivity().getApplicationContext(), LoginActivity.class);
@@ -62,6 +62,12 @@ public class ProfileFragment extends Fragment{
             Intent intent = new Intent(getActivity().getApplicationContext(), LoginActivity.class);
             startActivity(intent);
         });
+
+        binding.buttonUploadDocs.setOnClickListener(v1 -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), UploadDocsActivity.class);
+            startActivity(intent);
+        });
+
 
         return root;
 
