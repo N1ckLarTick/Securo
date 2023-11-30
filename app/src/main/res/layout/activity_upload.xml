@@ -48,7 +48,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="center"
-                android:text="Загрузить документы" />
+                android:text="@string/AddDocumentText" />
 
             <Button
                 android:id="@+id/buttonApply"
@@ -62,7 +62,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="0dp"
                 android:gravity="center"
-                android:text="Принять" />
+                android:text="@string/ApplyText" />
 
             <TextView
                 android:id="@+id/textViewBack"
@@ -71,7 +71,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="30dp"
                 android:gravity="center"
-                android:text="Назад" />
+                android:text="@string/BackText" />
 
             <ProgressBar
                 android:id="@+id/progressBar"

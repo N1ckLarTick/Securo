@@ -40,7 +40,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/white"
                     android:gravity="center"
-                    android:text="Загрузить докуементы"
+                    android:text="@string/AddDocumentText"
                     android:textColor="@color/blue_200" />
             </androidx.cardview.widget.CardView>
 

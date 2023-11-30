@@ -14,4 +14,7 @@
     <string name="SchoolWebText">Сайт Школы</string>
     <string name="ScheduleText">Расписание</string>
     <string name="QuitText">Выйти</string>
+    <string name="AddDocumentText">Загрузить пропуск</string>
+    <string name="ApplyText">Принять</string>
+    <string name="BackText">Назад</string>
 </resources>
