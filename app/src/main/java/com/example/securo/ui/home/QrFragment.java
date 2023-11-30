@@ -26,6 +26,7 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 public class QrFragment extends Fragment {
 
     private FragmentQrBinding binding;
+    public static String quer;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class QrFragment extends Fragment {
             MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
 
             try {
-                BitMatrix bitMatrix = multiFormatWriter.encode("GAY", BarcodeFormat.QR_CODE, 300,300);
+                BitMatrix bitMatrix = multiFormatWriter.encode("https://firebasestorage.googleapis.com/v0/b/s3cur0.appspot.com/o/images%2F" + quer + "?alt=media", BarcodeFormat.QR_CODE, 300,300);
                 BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
                 Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
 

@@ -33,7 +33,6 @@ public class UploadDocsActivity extends AppCompatActivity {
     Button buttonApply;
     ImageView imageView;
     TextView textBack;
-    public static String query;
     private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
