@@ -1,13 +1,18 @@
 package com.example.securo;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.http.QuicException;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.securo.databinding.ActivityLoginBinding;
+import com.example.securo.ui.home.QrFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
